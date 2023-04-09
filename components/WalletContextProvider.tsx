@@ -10,14 +10,14 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
 	const wallets = [new walletAdapterWallets.PhantomWalletAdapter()]
 
 	return (
-		<ConnectionProvider endpoint={endpoint}>
-	    <WalletProvider wallets={wallets}>
-	      <WalletModalProvider>
-	        { children }
+	<ConnectionProvider endpoint={endpoint}>
+	  <WalletProvider wallets={wallets}>
+	    <WalletModalProvider>
+	      { children }
         </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>
 	)
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                       
 
 export default WalletContextProvider
